@@ -1,0 +1,33 @@
+MOV AX,BX //send the contents of BX to AX
+MOV AX,[3]  //send the contents of Unit 3 to AX
+MOV AX,18 //send 18 to AX
+ADD AX,8 //AX=AX+8
+ADD AX,BX //AX=AX+BX
+
+Address Bus,Data Bus,Control Bus
+
+8086: 16-Bit data bus, 20-Bit address bus,the size of address space is 1MB while 80386 has 32-Bit address bus(4GB address space)
+
+
+
+89D8H means 89D8 hex, 10100011B means 10100011 binary
+
+BIOS:Basic Input/Outpus System
+
+ADDRESS SPACE: defines a range of discrete addresses, each of which may correspond to a network host, peripheral device, disk sector, a memory cell or other logical or physical entity. 
+
+Internal bus/External bus
+
+8086 has 14 registers:(16-Bit register)AX,BX,CX,DX,SI,DI,SP,BP,IP,CS,SS,DS,ES,PSW
+general registers:AX BX CX DX
+segment registers:CS DS SS ES
+For compatible with 8-bit register CPU(8085,8080):AX(AH,AL) BX(AH,AL) CX(CH,CL) DX(DH,DL)
+
+1 word=2 bytes
+
+Segment Address(段地址）/Offset Address(偏移地址） Physical address=SA*16+EA
+For example:123C8H=1230H*16+00C8H     data in 1230:00C8
+The maximum size of a segment is 64KB
+
+CS(Code Segment):IP(Instruction Pointer)
+After restart,default CS:IP is FFFF:0000.The the first instruction after restart is from FFFF0H
