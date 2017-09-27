@@ -31,3 +31,10 @@ The maximum size of a segment is 64KB
 
 CS(Code Segment):IP(Instruction Pointer)
 After restart,default CS:IP is FFFF:0000.The the first instruction after restart is from FFFF0H
+
+jmp 2AE3:3 CS=2AE3H,IP=0003H
+jmp 3:0B16 CS=0003H,IP=0B16H
+
+Only change IP method: jmp ax(means: mov IP,ax)
+before: ax=1000H,CS=2000H,IP=0003H
+after:ax=1000H,CS=2000H,IP=1000H
